@@ -5,4 +5,4 @@ interface Props {
   value: string | number
 }
 
-export const Foo: React.SFC<Props> = ({ value }) => <div>{isNumber(value) ? "Number" : "String"}</div>;
+export const Foo: React.SFC<Props> = ({ value }) => <div>{isNumber(value) ? "This is number" : "This is string"}</div>;
