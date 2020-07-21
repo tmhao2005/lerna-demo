@@ -1,4 +1,4 @@
-import { isNumber } from "@tmhao/helper/dist/isNumber";
+import { isNumber } from "@tmhao/helper";
 import * as React from "react";
 
 interface Props {
