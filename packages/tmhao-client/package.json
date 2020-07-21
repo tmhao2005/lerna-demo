@@ -1,0 +1,14 @@
+{
+  "name": "@tmhao/client",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Hao Tran",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@tmhao/helper": "^0.0.0",
+    "@types/react": "^16.9.43",
+    "react": "^16.13.1",
+    "typescript": "^3.9.7"
+  }
+}
