@@ -1,8 +1,15 @@
-import { isNumber } from "@tmhao/helper";
+import { Message } from "@tmhao/helper";
 import * as React from "react";
+import { IntlProvider } from "react-intl";
 
 interface Props {
   value: string | number
 }
 
-export const Foo: React.SFC<Props> = ({ value }) => <div>{isNumber(value) ? "This is number" : "This is string"}</div>;
+export const Foo: React.SFC<Props> = ({ value }) => {
+  return (
+    <IntlProvider locale="vi" messages={{ "hello": "Xin chao" }}>
+      <Message />
+    </IntlProvider>
+  )
+};

@@ -1,12 +1,13 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
     "jsx": "react",
     "module": "CommonJS",
     "target": "ES5",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "declaration": true
+    "declaration": true,
+    "lib": ["ES2018"]
   },
   "exclude": [
     "node_modules"
