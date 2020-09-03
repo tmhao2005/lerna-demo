@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc",
     "build:ttsc": "ttsc",
-    "build:webpack": "webpack"
+    "build:webpack": "webpack",
+    "test": "jest --config=jest.config.js"
   },
   "dependencies": {
     "@types/react-intl": "^3.0.0",
@@ -16,8 +17,16 @@
     "typescript-transform-paths": "^1.1.14"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.13",
     "@zerollup/rollup-preset-ts": "^1.7.18",
     "@zerollup/ts-transform-paths": "^1.7.18",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
     "ts-loader": "^8.0.1",
     "ttypescript": "^1.5.10",
     "webpack": "^4.44.0",

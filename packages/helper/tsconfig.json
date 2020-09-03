@@ -5,8 +5,8 @@
     "outDir": "./dist",    
     "declaration": true,
     "paths": {
-      "lib": [
-        "./lib"
+      "~*": [
+        "./src/*"
       ]
     },
     "plugins": [

@@ -9,7 +9,7 @@ const common = {
   context: resolve(__dirname),
   name: 'client',
   entry: {
-    client: './src/index.tsx',
+    client: './src/index.js',
   },
   mode: isProd ? 'production' : 'development',
   devtool: isProd ? false : false,
@@ -27,7 +27,19 @@ const common = {
       {
         test: /\.(ts|tsx)$/,
         use: {
-          loader: 'ts-loader'
+          loader: 'ts-loader',
+        },
+      },
+      {
+        test: /\.(jsx?)$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+            ]
+          }
         },
       },
     ]

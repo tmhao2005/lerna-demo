@@ -1,10 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist",
-    "lib": ["ES2019", "DOM"]
+    "lib": ["ES2019", "DOM"],
+    "paths": {
+      "components/*": ["components/*"]
+    }
   },
   "include": [
-    "./src"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ]
 }

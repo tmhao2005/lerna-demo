@@ -1,5 +1,5 @@
 import { Message } from "@tmhao/helper";
-import * as React from "react";
+import React from "react";
 import { IntlProvider } from "react-intl";
 
 interface Props {
