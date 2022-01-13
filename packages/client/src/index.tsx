@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Foo } from "./components/Foo";
+import { App } from "./components/App";
+
+console.log('Parent React version', React.version);
 
 ReactDOM.render(
-  <Foo value={1} />, 
+  <App />,
   document.getElementById('root')
 );

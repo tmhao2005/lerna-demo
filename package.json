@@ -9,6 +9,15 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "dev:client": "yarn workspace @tmhao/client run dev",
+    "build:lerna": "lerna exec -- webpack",
+    "build:share": "yarn workspace @tmhao/share run webpack",
+    "build:client": "yarn workspace @tmhao/client run webpack",
+    "build:order": "yarn build:share && yarn build:client",
+    "build": "yarn workspaces run build",
+    "build:lib": "lerna run build --ignore @tmhao/client"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }

@@ -9,7 +9,7 @@ const common = {
   context: resolve(__dirname),
   name: 'client',
   entry: {
-    client: './src/index.js',
+    client: './src/index.tsx',
   },
   mode: isProd ? 'production' : 'development',
   devtool: isProd ? false : false,
@@ -42,6 +42,16 @@ const common = {
           }
         },
       },
+      {
+        test: /\.(css)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {}
+          }
+        ]
+      }
     ]
   },
   plugins: [
