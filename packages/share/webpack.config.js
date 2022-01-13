@@ -1,15 +1,20 @@
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  target: 'web',
+  // target: 'node',
   entry: {
     index: path.resolve('./src/index.ts')
   },
   output: {
-    library: 'tmhao-helper',
+    library: 'share',
     libraryTarget: 'umd',
+    globalObject: 'this',
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
+  },
+  experiments: {
+    outputModule: true,
   },
   module: {
     rules: [
@@ -23,6 +28,17 @@ module.exports = {
         exclude: [
           /node_modules/
         ]
+      },
+      {
+        test: /\.(css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          // 'style-loader',
+          {
+            loader: 'css-loader',
+            options: {}
+          }
+        ]
       }
     ]
   },
@@ -33,6 +49,9 @@ module.exports = {
       src: path.resolve(__dirname, './src/')
     }
   },
+  plugins: [
+    new MiniCssExtractPlugin()
+  ],
   stats: {
     colors: true
   },
